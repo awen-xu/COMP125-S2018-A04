@@ -1,50 +1,5 @@
 <%- include ../partials/header.ejs %>
 
- <!--The project page header-->
-  <div class="jumbotron">
-    <h1 class="display-4 text-center myYellow" id="projectHeading">My Previous Projects</h1>
-    <p class="lead text-center" id="pageDescription">Here are three projects of mine. They are some of my favourites.</p>
-  </div>
-
-  <!--Section for the three projects-->
-  <div class="container contentPlacement">
-    <div class="jumbotron contentPlacement">
-
-      <!--Projects 1: Unity Game-->
-      <div class="row justify-content-center">
-        <div class="col-md-6 contentPlacement">
-          <img src="./Assets/images/fortissimo_gameplay.png" class="pictureScaling" alt="screenshot of unity game">
-        </div>
-        <div class="col-md-6 contentPlacement">
-          <h3 id="title1" class="myYellow">Unity Game - Fortissimo</h3>
-          <p id="paragraph1">Fortissimo is a simple 2D top down shooter game that I made in high school. It was made for an assignment from my physics class. This game was used to teach younger students about a specific job related to the study of physics. In this case, the particular specification is an acoustic engineer and how its study is used in making the LRAD (Long Range Acoustic Device), which is a tool for crowd/riot control used by authorities. I used Unity to write all the codes. As there were no lessons about programming or coding in my physics class, I had to find resources online in order to learn how to write the code.</p>
-        </div>
-      </div>
-      <hr>
-
-      <!--Projects 2: Tic Tac Toe-->
-      <div class="row justify-content-center">
-        <div class="col-md-6 contentPlacement">
-          <h3 id="title2" class="myYellow">TicTacToe – Java RTP</h3>
-          <p id="paragraph2">I made a Tic Tac Toe game through Java RTP in grade 11. It is simple in design. There are two players, and each takes turn to enter a number that determines the placement on the board. The game ends when either a player wins, or neither win after all tiles are filled. Each tile is given a number ID, and the players place their markers on a specific tile by entering the number associated with that tile. If statements are used to determine the outcome of the game.</p>
-        </div>
-        <div class="col-md-6">
-          <img src="./Assets/images/tictactoe_gameplay.png" class="pictureScaling" alt="screenshot of tictactoe">
-        </div>
-      </div>
-      <hr>
-
-      <!--Projects 3: Battleship-->
-      <div class="row justify-content-center">
-        <div class="col-md-6 contentPlacement">
-          <img src="./Assets/images/battleship_attack.png" class="pictureScaling" alt="screenshot of battleship">
-        </div>
-        <div class="col-md-6 contentPlacement">
-          <h3 id="title3" class="myYellow">Battleship – Java RTP</h3>
-          <p id="paragraph3">In grade 12, I wrote a little program that allows two players to play battleship. The game starts with having player 1 set down their ships on the tiles they want. Then, player 2 does the same. After the ship placement, the players take turn at guessing were their opponent’s ships are by clicking on the tiles. If they guess correctly, there will be an 'X' indicating that they have hit a ship. There is a status bar on the bottom that informs the players on the current standing of the game. The game ends when all ship pieces of one player are found.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<%- include ../partials/content.ejs %>
 
 <%- include ../partials/footer.ejs %>

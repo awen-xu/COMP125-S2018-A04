@@ -1,53 +1,5 @@
 <%- include ../partials/header.ejs %>
 
- <!-- Contact Form Section-->
-  <div class="row justify-content-center contentPlacement">
-    <div class="col-md-8 col-lg-6">
-      <div class="jumbotron">
-
-        <!--Heading and information-->
-        <div>
-          <h1 class="text-center myYellow" id="contactTitle">Send Me A Message</h1>
-          <p id="contactInfo" class="text-center">Write a message with the form below, and I will get back to you as soon as possible!</p>
-        </div>
-
-        <div class="card-body">
-          <p id="contactInstructions" class="text-warning">* Required</p>
-
-          <!--Form-->
-          <form>
-            <div class="form-group">
-              <label for="FirstName">First Name: *</label>
-              <input type="text" class="form-control form-control-lg" id="FirstName" pattern="[A-Za-z]{2,}" name="FirstName" required>
-            </div>
-            <div class="form-group">
-              <label for="LastName">Last Name: *</label>
-              <input type="text" class="form-control form-control-lg" id="LastName" pattern="[A-Za-z]{2,}" name="LastName" required>
-            </div>
-            <div class="form-group">
-              <label for="ContactNumber">Phone Number: *</label>
-              <input type="text" class="form-control form-control-lg" id="ContactNumber" pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
-                name="ContactNumber" placeholder="123-456-7890" required>
-            </div>
-            <div class="form-group">
-              <label for="EmailAddress">Email address: *</label>
-              <input type="email" class="form-control form-control-lg" id="EmailAddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                name="EmailAddress" placeholder="address@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="Subject">Subject: *</label>
-              <input type="text" class="form-control form-control-lg" id="Subject" name="Subject" required>
-            </div>
-            <div class="form-group">
-              <label for="Message">Message: *</label>
-              <textarea class="form-control form-control-lg" id="Message" name="Message" rows="4" required></textarea>
-            </div>
-            <hr>
-            <button id="submitButton" type="submit" class="btn btn-warning btn-lg btn-block">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+<%- include ../partials/content.ejs %>
 
 <%- include ../partials/footer.ejs %>
