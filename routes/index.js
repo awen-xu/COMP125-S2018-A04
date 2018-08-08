@@ -1,15 +1,14 @@
 let express = require('express');
 let router = express.Router();
 
-/* GET home page. */
+/* GET bio page. */
 router.get('/', function(req, res, next) {
   res.render('content/bio', { 
     title: 'Bio' 
   });
 });
 
-
-/* GET about page. */
+/* GET projects page. */
 router.get('/projects', function(req, res, next) {
   res.render('content/projects', { 
     title: 'Projects'
