@@ -3,7 +3,9 @@ File name: contact.js
 Author's name: Awen Xu
 Student number: 300992536
 Website: Mini Portfolio
-File description: This is the JavaScript file for the contact page of the mini portfolio. 
+Date Created: Aug 08, 2018
+Latest Revision: Aug 10, 2018
+File description: This is the JavaScript file for the contact page form validation of the mini portfolio. 
 */
 let content;
 ((content) => {
@@ -14,18 +16,6 @@ let content;
     let EmailAddress = document.getElementById("EmailAddress");
     let Subject = document.getElementById("Subject");
     let Message = document.getElementById("Message");
-
-
-    // Displays in the console - the form data entered by user
-    function OutputFormDataToConsole() {
-        console.log(`%c -----------FORM DATA----------- `, "font-weight: bold; font-size: 16px; color: maroon; background-color: rgba(0, 255, 0, 0.3);");
-        console.log(`%c First Name     : ${FirstName.value}`, "color: maroon; font-style: italic;");
-        console.log(`%c Last Name      : ${LastName.value}`, "color: maroon; font-style: italic;");
-        console.log(`%c Contact Number : ${ContactNumber.value}`, "color: maroon; font-style: italic;");
-        console.log(`%c Email Address  : ${EmailAddress.value}`, "color: maroon; font-style: italic;");
-        console.log(`%c Subject        : ${Subject.value}`, "color: maroon; font-style: italic;");
-        console.log(`%c Your Message   : ${Message.value}`, "color: maroon; font-style: italic;");
-    }
 
 
     // Clears the validation message for the form elements
@@ -87,29 +77,13 @@ let content;
 
     // main function that runs when on contact.html
     function ContactContent() {
-        //inserts title in the h tag
-        let title = "Send Me A Message";
-        let contactHeader = document.getElementById("contactTitle");
-        contactHeader.textContent = title;
 
         ClearValidationMessage();
-
-        // create a new HTML Element(cancel button), configure it, and add to page
-        let cancelButton = document.createElement("button");
-        cancelButton.setAttribute("class", "btn btn-secondary btn-block");
-        cancelButton.classList.add("btn-lg");
-        cancelButton.textContent = "Cancel";
-        cancelButton.addEventListener("click", function (event) {
-            event.preventDefault();
-            window.open("a03_index.html", "_parent");
-        });
-        document.forms[0].appendChild(cancelButton);
 
         // configure the submit button
         let SendButton = document.getElementById("submitButton");
         SendButton.addEventListener("click", (event) => {
             if (!document.forms[0].checkValidity()) {
-                OutputFormDataToConsole();
                 ValidateForm();
             }
             else{
